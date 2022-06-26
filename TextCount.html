@@ -2,14 +2,19 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>字数カウント</title>
 </head>
 
 <body>
-    <h1>字数をカウントする</h1> 
-    <textarea placeholder="カウントしたい文字をペーストしてください" id="text" cols="30" rows="10"></textarea>
+    <h1>字数のカウント</h1> 
+    <p id="num">0文字</p>
+    <textarea placeholder="カウントしたい文字をペーストしてください" id="text" onkeyup="showCount(this);" cols="30" rows="10"></textarea>
+    <script>
+        const showCount = (str) => {
+            document.getElementById('num').innerHTML = str.value.replace(/ /g, "").length + '文字';
+        };
+    </script>
 </body>
 
 </html>
