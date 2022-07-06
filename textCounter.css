@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+#div1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    margin-left: 4rem;
+}
+
+#div2{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#resetBtn{
+    height: 35px;
+    margin-bottom: 3rem;
+    margin-right: 9rem;
+    width: 6rem;
+    cursor: pointer;
+}
+
+#div3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#text{
+    width: 65%;
+    height: 30rem;
+    font-size: 25px;
+    margin-left: 7rem;
+    margin-right: 1rem;
+}
+
+#num{
+    text-align: center;
+    padding-bottom: 0;
+    width: 10rem;
+    margin-top: 448px;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 0;
+    font-size: 30px;
+}
