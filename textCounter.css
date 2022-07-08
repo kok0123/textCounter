@@ -7,31 +7,41 @@
     justify-content: flex-start;
 }
 
-h1{
+#p1{
     font-size: 40px;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
-    margin-left: 4rem;
+    margin-top: 0;
+    margin-left: 2.5rem;
+    margin-bottom: 0;
 }
 
-#div2{
-    display: flex;
-    justify-content: flex-end;
-}
-
-#resetBtn{
-    height: 35px;
-    margin-bottom: 3rem;
-    margin-right: 9rem;
-    width: 6rem;
-    cursor: pointer;
-}
-
-#div3 {
+#div2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 2rem;
+}
+
+#div2 p{
+    font-size: 30px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#num{
+    text-align: center;
+    padding-bottom: 0;
+    width: 10rem;
+    height: 45px;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 30px;
+}
+
+#div3{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
 }
 
 #text{
@@ -39,16 +49,40 @@ h1{
     height: 30rem;
     font-size: 25px;
     margin-left: 7rem;
-    margin-right: 1rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
 }
 
-#num{
-    text-align: center;
-    padding-bottom: 0;
-    width: 10rem;
-    margin-top: 448px;
-    margin-left: 1rem;
-    margin-right: 2rem;
-    margin-bottom: 0;
-    font-size: 30px;
+#resetBtn{
+    height: 35px;
+    margin-top: 0;
+    margin-right: 5rem;
+    width: 6rem;
+    cursor: pointer;
+}
+
+#condition{
+    display: flex;
+    align-items: flex-start;
+    font-size: 20px;
+    margin-left: 6rem;
+    height: 2rem;
+}
+
+#p2{
+    font-size: 28px;
+}
+
+#value{
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+#wrt1, #wrt2{
+    height: 30px;
+    width: 6rem;
+    font-size: 100%;
+    margin-top: 0.8rem;
 }

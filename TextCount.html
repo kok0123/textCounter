@@ -11,18 +11,29 @@
 <body>
     
     <div id="div1">
-        <h1>字数カウント</h1> 
+        <p id="p1">字数カウント</p> 
+    </div>
+
+    <div id="condition">
+        <p id="p2">レポートの分量 :&nbsp;</p>
+        <div id="value">
+            <input type="number" id="wrt1" min="0">
+            <p>&nbsp;文字　～&emsp;</p>
+            <input type="number" id="wrt2" min="0" max="9999">
+            <p>&nbsp;文字</p>
+        </div>
     </div>
 
     <div id="div2">
-        <button id="resetBtn">リセット</button>
+        <p>字数 :&nbsp;</p>
+        <p id="num">0 文字</p>
     </div>
 
     <div id="div3">
         <textarea placeholder="カウントしたい文をペーストしてください" id="text" onkeyup="showCount(this);" cols="30" rows="10"></textarea>
-        <p id="num">0 文字</p>
+        <button id="resetBtn">リセット</button>
     </div>
-   
+
     <script>
         const num = document.getElementById('num');
         const text = document.getElementById('text');
