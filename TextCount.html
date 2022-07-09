@@ -37,16 +37,44 @@
     <script>
         const num = document.getElementById('num');
         const text = document.getElementById('text');
-        const resetBtn = document.getElementById('resetBtn')
+        const resetBtn = document.getElementById('resetBtn');
+        const wrt1 = document.getElementById('wrt1');
+        const wrt2 = document.getElementById('wrt2');
 
         const showCount = (str) => {
             const strNum = str.value;
-            num.innerHTML = strNum.replace(/\s+/g, '').length +' '+ '文字'; //句読点を除く場合は.replace(/\s+|。|、/g, '')
+            const strLength = strNum.replace(/\s+/g, '').length; 
+            num.innerHTML = strLength +' '+ '文字'; //句読点を除く場合は.replace(/\s+|。|、/g, '')
+
+            if (wrt1.value < wrt2.value && strLength != '' && wrt1.value && wrt2.value) {
+                if (wrt2.value < strLength) {
+                    const oneceAns = strLength - wrt2.value;
+                    window.alert(oneceAns + '文字多いです');
+                } else if (wrt1.value > strLength) {
+                    const secondAns = wrt1.value - strLength;
+                    window.alert(secondAns + '文字不足しています');
+                } else {
+                    window.alert('条件を満たしています');
+                }
+                return;
+            } else if (wrt1.value > strLength && !wrt2.value) {
+                const thirdAns = wrt1.value - strLength;
+                window.alert(thirdAns + '文字不足しています');
+            } else if (wrt2.value < strLength && !wrt1.value) {
+                const forthAns = strLength - wrt2.value;
+                window.alert(forthAns + '文字多いです');
+            } else if (wrt1.value == strLength && wrt2.value == strLength) {
+                window.alert('条件を満たしています');
+            } else if (wrt1.value > wrt2.value && strLength != '' && wrt1.value && wrt2.value) {
+                window.alert('条件を修正してください');
+            }
         };
 
         const resetText = () => {
             num.innerHTML = '0 文字';
             text.value = '';
+            wrt1.value = '';
+            wrt2.value = '';
         };
 
         resetBtn.addEventListener('click', () => {
