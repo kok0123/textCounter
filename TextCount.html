@@ -10,17 +10,22 @@
 
 <body>
     
-    <div id="div1">
+    <!--<div id="div1">
         <p id="p1">字数カウント</p> 
-    </div>
+    </div>-->
 
     <div id="condition">
-        <p id="p2">レポートの分量 :&nbsp;</p>
+        <div id="cdn">
+            <input type="checkbox" name="selection">
+            <p id="p2">レポートの条件を指定<!-- :&nbsp;--></p>
+        </div>
+
         <div id="value">
-            <input type="number" id="wrt1" min="0">
+            <!--<input type="number" id="wrt1" min="0">
             <p>&nbsp;文字　～&emsp;</p>
             <input type="number" id="wrt2" min="0" max="9999">
-            <p>&nbsp;文字</p>
+            <p>&nbsp;文字</p>-->
+            <button id="resetBtn">リセット</button>
         </div>
     </div>
 
@@ -31,7 +36,6 @@
 
     <div id="div3">
         <textarea placeholder="カウントしたい文をペーストしてください" id="text" onkeyup="showCount(this);" cols="30" rows="10"></textarea>
-        <button id="resetBtn">リセット</button>
     </div>
 
     <script>
